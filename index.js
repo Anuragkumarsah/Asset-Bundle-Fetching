@@ -36,7 +36,7 @@ app.get('/data', async (req, res) => {
     const fileRef = ref(storage, `models/${id}`);
 
     const downloadURL = await getDownloadURL(fileRef);
-    res.send(downloadURL)
+    res.redirect(downloadURL)
     console.log(downloadURL);
 })
 
